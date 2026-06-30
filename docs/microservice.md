@@ -30,3 +30,14 @@ graph LR
   D --> |fetch password| E[Vault]
   D -->|result| A;
 ```
+
+``` mermaid
+sequenceDiagram
+  Client->>Configuration: derive username and hash
+  Client->>NSoT: request password ID
+  NSoT->>Client: return password ID
+  Client->>Validator: send password ID and hash
+  Validator->>Vault: request password
+  Vault->>Validator: return password
+  Validator->>Client: return validation status and hash
+  Client->>Configuration: update hash
