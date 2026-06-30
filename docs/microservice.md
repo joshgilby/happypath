@@ -2,7 +2,7 @@
 icon: lucide/key-round
 ---
 
-# Hash Verification Microservice - Core
+# Hash Verification Microservice - Intro
 
 A microservice to validate hashes from device configurations against securely stored passwords.
 
@@ -19,6 +19,10 @@ The requirements driving this demo are:
 The first two requiremens are straightforward. Firstly, the solution must include a password vault. Secondly, any remote API calls need to support SSL. Setting up SSL itself is beyond the scope of this exercise as SSL termination is well documented, but may be addressed in an update.
 
 To simplify the code base, we will limit our demo's scope to managing local login credentials for Cisco devices. Organizations can extend this approach to apply to other sensitive configuration data, i.e. PSKs for ipsec, RADIUS, or TACACS. The local user credential also presents an interesting use case in that verifying login credentials is not trivial when TACACS is in use.
+
+## Source Code
+
+The full source code for this workshop is available on [github](https://github.com/joshgilby/happypath)
 
 ## Design
 
