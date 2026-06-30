@@ -2,7 +2,7 @@
 icon: lucide/key-round
 ---
 
-# Hash Verification Microservice
+# Hash Verification Microservice - Core
 
 A microservice to validate hashes from device configurations against securely stored passwords.
 
@@ -22,11 +22,29 @@ To simplify the code base, we will limit our demo's scope to managing local logi
 
 ## Design
 
+### Components
+
+**Vault**: a secure password manager. We will use the keyrings.cryptfile module, which stores encrypted passwords on the local filesystem.
+
+**Validator**: a microservice that recieves a key ID and hash from a client, fetches the referenced password from the vault, and determines whether the hash is valid for the given password. This is the only code that can access the vault.
+
+**Client**: a client to demonstrate how to use the microservice to validate password hashes from device configurations.
+
+**Configuration**: the device configuration to validate. Here, we will use a configuration file on the local filesystem.
+
+**NSoT**: identifies the password that is used for local users. We will maintain those identifiers in a nornir inventory file.
+
+### Configuration Validation Sequence
+
 ``` mermaid
-graph LR
-  A[Client] --> |fetch password id| B[NSoT];
-  A --> |fetch hash| C[Device];
-  A --> |password id and hash| D[Hash Verification];
-  D --> |fetch password| E[Vault]
-  D -->|result| A;
+sequenceDiagram
+  autonumber
+  Client->>Configuration: derive username and hash
+  Client->>NSoT: request password ID
+  NSoT->>Client: return password ID
+  Client->>Validator: send password ID and hash
+  Validator->>Vault: request password
+  Vault-->>Validator: return password
+  Validator-->>Client: return validation status and hash
+  Client->>Configuration: update hash (on failure)
 ```
