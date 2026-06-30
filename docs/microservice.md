@@ -41,3 +41,4 @@ sequenceDiagram
   Vault->>Validator: return password
   Validator->>Client: return validation status and hash
   Client->>Configuration: update hash
+```
