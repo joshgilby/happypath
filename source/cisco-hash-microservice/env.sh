@@ -1,0 +1,1 @@
+export KEYRING_CRYPTFILE_PASSWORD=foobar

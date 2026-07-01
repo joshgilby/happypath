@@ -1,0 +1,10 @@
+---
+r1:
+  data:
+    localusers:
+      - localuser
+
+r2:
+  data:
+    localusers:
+      - localuser
