@@ -179,7 +179,7 @@ The microservice is now running and ready to process requests. Use the curl comm
 
 ``` bash title="tests.sh"
 curl 'http://localhost:8000/?username=localuser&service=router&password_hash=$9$UK9FYKZUD.n94E$qcLQeaiNaUjVj181Q8Hh2cUya7qdMV4q.qszxl3H0Ha' # should fail, returning new hash
-curl 'http://localhost:8000/?username=localuser&service=router&password_hash=$8$LkGlosq.R44sx.$VLpv7K56GEx6jhU4aMKgsGXvMo1n1EE/fElkbpJXQfY' # should pass, returning the original hash
+curl 'http://localhost:8000/?username=localuser&service=router&password_hash=$8$LkGlosq.R44sx.$VLpv7K56GEx6jhU4aMKgsGXvMo1n1EE/fElkbpJXQfY' # should pass, returning test hash
 ```
 
 If the first test fails, and the second test passes, the microservice is functional and we can move to the client.
