@@ -221,11 +221,9 @@ A service isn't much use without a client to consume it. Our client will use the
 from nornir import InitNornir
 from nornir.core.task import Task, Result
 from nornir_utils.plugins.functions import print_result
-import pprint
-
+from pprint import pformat
 import requests
 
-# Initialize nornir
 nr = InitNornir(
     inventory={
         "plugin":"SimpleInventory",
@@ -241,7 +239,7 @@ def get_facts(task:Task) -> Result:
         for i in file:
             splitline=i.rstrip().split(" ")
             task.host.data['f_users'][splitline[1]]=splitline[6]
-    msg=pprint.pformat(task.host.data['f_users'])
+    msg=pformat(task.host.data['f_users'])
     return Result(
         host=task.host,
         result=msg
@@ -250,15 +248,16 @@ def get_facts(task:Task) -> Result:
 def get_truth(task:Task) -> Result:
     task.host.data['t_users']={}
     for i in task.host.data['localusers']:
-        hash=''
+        password_hash=''
         if i in task.host.data['f_users']:
-            hash=task.host.data['f_users'][i]
-        url=f"http://localhost:8000/?username={i}&hash={hash}&service=router"
+            password_hash=task.host.data['f_users'][i]
+        url=f"http://localhost:8000/?username={i}&password_hash={password_hash}&service=router"
         r=requests.get(url)
-        task.host['t_users'][i]=r.json()['hash']
+        task.host.data['t_users'][i]=r.json()['hash']
+        msg=pformat(task.host.data['t_users'])
     return Result(
         host=task.host,
-        result=task.host.data['t_users']
+        result=msg
     )
 
 def generate_artifact(task:Task) -> Result:
@@ -276,8 +275,7 @@ def generate_artifact(task:Task) -> Result:
         result=task.host.data['artifact']
     )
 
-# Define a task
-def some_task(task:Task) -> Result:
+def all_the_tasks(task:Task) -> Result:
     task.run(task=get_facts)
     task.run(task=get_truth)
     task.run(task=generate_artifact)
@@ -285,8 +283,7 @@ def some_task(task:Task) -> Result:
         host=task.host,
     )
 
-# Execute the task
-result=nr.run(task=some_task)
+result=nr.run(task=all_the_tasks)
 print_result(result)
 ```
 
