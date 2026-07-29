@@ -2,4 +2,10 @@
 **/__pycache__/
 **/*.log
 **/*.swp
+**/node_modules/
+**/.env
+**/.env.*
+source/cisco-hash-microservice/credentials.enc.json
 site/
+.claude/
+.specify/
