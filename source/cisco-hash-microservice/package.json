@@ -1,0 +1,11 @@
+{
+  "name": "cisco-hash-microservice",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "test": "node --test"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
