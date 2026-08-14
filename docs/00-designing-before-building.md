@@ -268,4 +268,4 @@ nine articles, and it starts in the next one.
 ---
 
 *The roadmap as this article describes it, before any code existed:
-[quelaag-milestone-0.tar.gz](https://github.com/joshgilby/happypath/assets/releases/milestone-0).*
+[quelaag-milestone-0.tar.gz](https://happypathnetworking.com/assets/releases/quelaag-milestone-0.tar.gz)
