@@ -44,10 +44,19 @@ Copyright &copy; 2026 Josh Gilby
 # can be defined using TOML syntax.
 #
 # Read more: https://zensical.org/docs/setup/navigation/
-# nav = [
-#   { "Get started" = "index.md" },
-#   { "Markdown in 5min" = "markdown.md" },
-# ]
+nav = [
+  { "Quelaag" = [
+    { "Design before building" = "00-designing-before-building.md" },
+    #{ "You don't need a rack of routers" = "01-you-dont-need-a-rack-of-routers.md" },
+    #{ "Reading the $8$" = "02-reading-the-8.md" },
+    #{ "Stash the secrets" = "03-a-vault-for-known-good-secrets.md" },
+    #{ "The verification service" = "04-the-verification-service.md" },
+    #{ "Correcting a device" = "05a-correcting-a-device-without-breaking-it.md" },
+    #{ "An external caller" = "05b-being-called-by-a-program.md" },
+    #{ "Closing the loop" = "06a-closing-the-loop.md" },
+    #{ "Shipping it" = "06b-shipping-it.md" },
+  ] },
+]
 
 # With the "extra_css" option you can add your own CSS styling to customize
 # your Zensical project according to your needs. You can add any number of
