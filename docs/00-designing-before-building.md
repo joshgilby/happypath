@@ -2,8 +2,8 @@
 icon: lucide/pencil-ruler
 ---
 
-![Drafting](/assets/00-drafting-l.png#only-light)
-![Drafting](/assets/00-drafting-d.png#only-dark)
+![Drafting](/assets/images/00-drafting-l.png#only-light)
+![Drafting](/assets/images/00-drafting-d.png#only-dark)
 
 # Designing before building
 
