@@ -18,8 +18,9 @@ On a Linux host, or Windows via WSL2:
   all and no build step, so a recent Node is the whole of it
 - **About 4 GB of free memory**, and `sudo`, which containerlab needs
 
-Exact minimum versions are in `lab/README.md` inside the download, checked at the top of
-the file. They are listed there rather than here so there is one copy to keep current.
+Exact minimum versions are in `lab/README.md` inside the download below, checked at the
+top of the file. They are listed there rather than here so there is one copy to keep
+current.
 
 ## The image is bring-your-own
 
@@ -32,14 +33,29 @@ Getting it takes **about thirty minutes**, most of that download:
 
 1. Sign in at [developer.cisco.com/modeling-labs](https://developer.cisco.com/modeling-labs/)
    and get the CML-Free **reference platform ISO**. A free Cisco account is enough.
-2. Unzip it — Cisco ships the ISO inside a zip.
-3. Run the build script against it. It extracts the IOL binary, fetches the tooling that
-   packages it, and produces the container image containerlab expects:
+2. Get the build script:
 
     ```sh
-    unzip ~/Downloads/refplat-<version>-free-iso.zip -d ~/Downloads
-    ./lab/build-image.sh ~/Downloads/refplat-<version>-free.iso
+    curl -LO https://happypathnetworking.com/assets/releases/quelaag-before-you-start.tar.gz
+    tar -xzf quelaag-before-you-start.tar.gz
+    cd quelaag-before-you-start
     ```
+
+3. Unzip the ISO into that directory — Cisco ships it inside a zip, and the `.gitignore`
+   you just unpacked keeps both out of any repository you put this in:
+
+    ```sh
+    unzip /path/to/refplat-<version>-free-iso.zip -d .
+    ```
+
+4. Run the build. It extracts the IOL binary, fetches the tooling that packages it, and
+   produces the container image containerlab expects:
+
+    ```sh
+    ./lab/build-image.sh refplat-<version>-free.iso
+    ```
+
+    It finishes by printing `Image ready: quelaag/cisco_iol:lab`.
 
 That is once, ever. Every article after this reuses the same image.
 
@@ -63,6 +79,11 @@ That is once, ever. Every article after this reuses the same image.
     Articles you cannot run still quote real output throughout, so nothing is hidden.
 
 ## Then
+
+That download is the image build and nothing else. The lab it feeds — the topology, the
+two device configurations, and the scripts that drive them — arrives with
+[article 1](01-you-dont-need-a-rack-of-routers.md), where it is explained rather than
+just handed over. From there on the lab is two commands:
 
 ```sh
 ./lab/up.sh          # two routers, about two minutes to boot
