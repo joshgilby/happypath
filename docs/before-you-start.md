@@ -4,7 +4,7 @@ Every article in this series runs against the same two-device lab on your own ma
 Setting it up once is the only prerequisite, and this page covers it all.
 
 If you would rather just read, that works too — the articles quote real output from real
-IOL devices throughout, so nothing is hidden behind a setup step. However, the lab is esy to set up and the
+IOL devices throughout, so nothing is hidden. However, the lab is easy to set up and the
 series is much better with it.
 
 ## What you need
@@ -13,26 +13,26 @@ On a Linux host, or Windows via WSL2:
 
 - **Docker** — the devices run as containers
 - **containerlab** — builds and wires the topology
+- **unzip** and **make** - needed by the image build script
 - **uv** — runs the Python scripts, and installs their exact pinned dependencies for you
 - **Node** — from article 2 onward. The JavaScript here has no runtime dependencies at
   all and no build step, so a recent Node is all that's needed
 - **About 4 GB of free memory**, and `sudo`, which containerlab needs
 
-Exact minimum versions are in `lab/README.md` inside the download below, checked at the
+Minimum versions are in `lab/README.md` inside the download below, checked at the
 top of the file. They are listed there rather than here so there is one copy to keep
 current.
 
 ## The image is bring-your-own
 
 The lab devices run Cisco IOL, and **this project cannot ship it**. Cisco distributes IOL
-in the reference platform ISO of CML-Free, licensed for use within CML, so the repository
-contains no image, no binary, and a `.gitignore` that blocks either from ever being
-committed. You download the ISO with your own account and a script does the rest.
+in the reference platform ISO of CML-Free, licensed for use within CML, so this site
+contains no image. You download the ISO with your own account and a script does the rest.
 
-Getting it takes **about thirty minutes**, most of that download:
+Getting it takes **about fifteen minutes**, most of which is to register and download the image:
 
 1. Sign in at [developer.cisco.com/modeling-labs/cml-free/](https://developer.cisco.com/docs/modeling-labs/cml-free/)
-   and get the CML-Free **reference platform ISO**. A free Cisco account is enough.
+   and get the CML-Free **reference platform ISO**. You will need a Cisco account.
 2. Get the build script:
 
     ```sh
@@ -52,20 +52,19 @@ Getting it takes **about thirty minutes**, most of that download:
    produces the container image containerlab expects:
 
     ```sh
-    ./lab/build-image.sh refplat-<version>-free.iso
+    sudo ./lab/build-image.sh refplat-<version>-free.iso
     ```
 
     It finishes by printing `Image ready: quelaag/cisco_iol:lab`.
 
-That is once, ever. Every article after this reuses the same image.
+That's all it takes. Every article after this reuses the same image.
 
-!!! warning "There is no substitute image, and there will not be one"
+!!! warning "Labs will not run without this image"
 
-    A mock device was considered and deliberately rejected, so without the ISO you
-    cannot run the lab. That is a real limitation and it is better said here than
-    discovered three articles in.
+    Without the ISO you
+    cannot run the lab. That is a real limitation, but it doesn't block everything.
 
-    It is not the whole series, though. Roughly half of it never touches a device:
+    Roughly half of the series does not require a lab:
 
     | Article | Runs without the lab? |
     |---------|-----------------------|
@@ -73,7 +72,7 @@ That is once, ever. Every article after this reuses the same image.
     | 2 — the library | Yes, apart from the round-trip demonstration at the end |
     | 3 — the vault | Entirely |
     | 4 — the verification service | Entirely |
-    | 5a, 5b — the engine | No. It exists to change devices |
+    | 5a, 5b — the engine | No  |
     | 6a, 6b — the receiver, and shipping it | No |
 
     Articles you cannot run still quote real output throughout, so nothing is hidden.
