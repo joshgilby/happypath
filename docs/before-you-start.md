@@ -1,10 +1,10 @@
 # Before you start
 
 Every article in this series runs against the same two-device lab on your own machine.
-Setting it up once is the only prerequisite, and this page is the whole of it.
+Setting it up once is the only prerequisite, and this page covers it all.
 
 If you would rather just read, that works too — the articles quote real output from real
-devices throughout, so nothing is hidden behind a setup step. But the lab is cheap and the
+IOL devices throughout, so nothing is hidden behind a setup step. However, the lab is esy to set up and the
 series is much better with it.
 
 ## What you need
@@ -15,7 +15,7 @@ On a Linux host, or Windows via WSL2:
 - **containerlab** — builds and wires the topology
 - **uv** — runs the Python scripts, and installs their exact pinned dependencies for you
 - **Node** — from article 2 onward. The JavaScript here has no runtime dependencies at
-  all and no build step, so a recent Node is the whole of it
+  all and no build step, so a recent Node is all that's needed
 - **About 4 GB of free memory**, and `sudo`, which containerlab needs
 
 Exact minimum versions are in `lab/README.md` inside the download below, checked at the
@@ -31,7 +31,7 @@ committed. You download the ISO with your own account and a script does the rest
 
 Getting it takes **about thirty minutes**, most of that download:
 
-1. Sign in at [developer.cisco.com/modeling-labs](https://developer.cisco.com/modeling-labs/)
+1. Sign in at [developer.cisco.com/modeling-labs](https://developer.cisco.com/docs/modeling-labs/cml-free/)
    and get the CML-Free **reference platform ISO**. A free Cisco account is enough.
 2. Get the build script:
 
@@ -80,7 +80,9 @@ That is once, ever. Every article after this reuses the same image.
 
 ## Then
 
-That download is the image build and nothing else. The lab it feeds — the topology, the
+That download is the scipt to build the image and nothing else. *You will need to carry this image forward* as you go through the series since it cannot be distributed directly.
+
+The lab it feeds — the topology, the
 two device configurations, and the scripts that drive them — arrives with
 [article 1](01-you-dont-need-a-rack-of-routers.md), where it is explained rather than
 just handed over. From there on the lab is two commands:
