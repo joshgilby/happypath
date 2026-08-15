@@ -9,11 +9,11 @@ series is much better with it.
 
 ## What you need
 
-On a Linux host, or Windows via WSL2:
+On a Linux host, or Windows via WSL:
 
 - **Docker** — the devices run as containers
 - **containerlab** — builds and wires the topology
-- **unzip** and **make** - needed by the image build script
+- **unzip** and **make** — needed by the image build script
 - **uv** — runs the Python scripts, and installs their exact pinned dependencies for you
 - **Node** — from article 2 onward. The JavaScript here has no runtime dependencies at
   all and no build step, so a recent Node is all that's needed
