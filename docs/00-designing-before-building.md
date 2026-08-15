@@ -45,6 +45,9 @@ will understand:
 - The value of measuring while building
 - Synchronous vs. asynchronous APIs
 
+The author also employed AI assistance during this project, with spec-kit and Claude Code, specifically.
+All of the code is Claude's. I deliberately left its mistakes uncorrected. The article prose is either mine, or heavily edited. 
+
 ## What are we **not** doing here?
 
 Crucially, we are not building a production-ready system. To make the code accessible to
@@ -246,7 +249,7 @@ The nine articles follow the build, each one a runnable milestone.
 While there is no code yet, you can download the project roadmap along with the decision log and glossary as they stand at this point:
 
 ```sh
-curl -LO https://github.com/joshgilby/quelaag/releases/download/milestone-0/quelaag-milestone-0.tar.gz
+curl -LO https://happypathnetworking.com/assets/releases/quelaag-milestone-0.tar.gz
 ```
 
 Subsequent articles will include links to their respective archives.
@@ -268,4 +271,4 @@ nine articles, and it starts in the next one.
 ---
 
 *The roadmap as this article describes it, before any code existed:
-[quelaag-milestone-0.tar.gz](https://happypathnetworking.com/assets/releases/quelaag-milestone-0.tar.gz)
+[quelaag-milestone-0.tar.gz](https://happypathnetworking.com/assets/releases/quelaag-milestone-0.tar.gz).*
