@@ -31,7 +31,7 @@ committed. You download the ISO with your own account and a script does the rest
 
 Getting it takes **about thirty minutes**, most of that download:
 
-1. Sign in at [developer.cisco.com/modeling-labs](https://developer.cisco.com/docs/modeling-labs/cml-free/)
+1. Sign in at [developer.cisco.com/modeling-labs/cml-free/](https://developer.cisco.com/docs/modeling-labs/cml-free/)
    and get the CML-Free **reference platform ISO**. A free Cisco account is enough.
 2. Get the build script:
 
