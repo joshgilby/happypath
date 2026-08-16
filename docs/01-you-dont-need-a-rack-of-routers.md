@@ -164,7 +164,7 @@ everything `up.sh` created.
     ```
 
 Two things in that output deserve a mention. The deployment takes about two seconds, and
-the devices then take about two minutes to boot — the table says `running` long before
+the devices then take up to two minutes to boot — the table says `running` long before
 either answers SSH, which is normal and not a fault. And the lines touching `/etc/hosts`
 and `/etc/ssh/ssh_config.d/` are containerlab writing name resolution and an SSH
 configuration drop-in for you, so `ssh clab-quelaag-r1` works by name.
@@ -478,7 +478,7 @@ Connection to 192.0.2.11 closed by remote host.
 Connection to 192.0.2.11 closed.
 ```
 
-Now reboot a third time:
+Finally, reboot a third time:
 
 ``` console
 $ uv run scripts/list_users.py r1     # before
@@ -501,13 +501,13 @@ a saved startup configuration.
 
 ## What you have now
 
-Take the count from that last section: three plausible checks, three wrong conclusions on
+In the last section we ran three plausible checks, with three wrong conclusions on
 offer. A healthy device indistinguishable from a hang. A factory reset masquerading as
 evidence of loss. Hashes that moved when nothing had changed — and, inside that one, a
 save that silently never happened. None of it came from documentation;
 it came from running the operations and reading the output,
 including the empty line where an `[OK]` should have been. That habit — measure, then look
-hard at what the measurement actually says — is this series' whole method, and this was
+hard at what the measurement actually says — is employed throughout this series, and this was
 its first demonstration on real equipment. The stakes only go up from here.
 
 You also have the thing the series needed: a two-router network that boots to a known
