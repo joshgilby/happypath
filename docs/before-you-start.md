@@ -15,11 +15,12 @@ series is much better with it.
 
 On a Linux host, or Windows via WSL2:
 
-- **Docker** — the devices run as containers
-- **containerlab** — builds and wires the topology
-- **unzip** and **make** — needed to build the image
-- **uv** — runs the Python scripts, and installs their exact pinned dependencies for you
-- **Node** — from article 2 onward. The JavaScript here has no runtime dependencies at
+- **Docker** 24 or newer — the devices run as containers
+- **containerlab** 0.60 or newer — builds and wires the topology
+- **unzip** 6.0 or newer — needed to build image
+- **make** 4.0 or newer — needed to build the image
+- **uv** .5 or newer — runs the Python scripts, and installs their exact pinned dependencies for you
+- **Node** 20 or newer — from article 2 onward. The JavaScript here has no runtime dependencies at
   all and no build step, so a recent Node is all that's needed
 - **About 4 GB of free memory**, and `sudo`, which containerlab needs
 
