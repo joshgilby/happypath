@@ -45,9 +45,11 @@ Copyright &copy; 2026 Josh Gilby
 #
 # Read more: https://zensical.org/docs/setup/navigation/
 nav = [
+  { "Home" = "index.md" },
   { "Quelaag" = [
     { "Design before building" = "00-designing-before-building.md" },
-    #{ "You don't need a rack of routers" = "01-you-dont-need-a-rack-of-routers.md" },
+    { "Setting up" = "before-you-start.md" },
+    { "You don't need a rack of routers" = "01-you-dont-need-a-rack-of-routers.md" },
     #{ "Reading the $8$" = "02-reading-the-8.md" },
     #{ "Stash the secrets" = "03-a-vault-for-known-good-secrets.md" },
     #{ "The verification service" = "04-the-verification-service.md" },

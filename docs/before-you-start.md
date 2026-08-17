@@ -1,3 +1,7 @@
+---
+icon: lucide/list-checks
+---
+
 # Before you start
 
 Every article in this series runs against the same two-device lab on your own machine.
@@ -9,11 +13,11 @@ series is much better with it.
 
 ## What you need
 
-On a Linux host, or Windows via WSL:
+On a Linux host, or Windows via WSL2:
 
 - **Docker** — the devices run as containers
 - **containerlab** — builds and wires the topology
-- **unzip** and **make** — needed by the image build script
+- **unzip** and **make** — needed to build the image
 - **uv** — runs the Python scripts, and installs their exact pinned dependencies for you
 - **Node** — from article 2 onward. The JavaScript here has no runtime dependencies at
   all and no build step, so a recent Node is all that's needed
@@ -31,7 +35,7 @@ contains no image. You download the ISO with your own account and a script does 
 
 Getting it takes **about fifteen minutes**, most of which is to register and download the image:
 
-1. Sign in at [developer.cisco.com/modeling-labs/cml-free/](https://developer.cisco.com/docs/modeling-labs/cml-free/)
+1. Sign in at [developer.cisco.com/docs/modeling-labs/cml-free/](https://developer.cisco.com/docs/modeling-labs/cml-free/)
    and get the CML-Free **reference platform ISO**. You will need a Cisco account.
 2. Get the build script:
 
@@ -79,7 +83,7 @@ That's all it takes. Every article after this reuses the same image.
 
 ## Then
 
-That download is the scipt to build the image and nothing else. *You will need to carry this image forward* as you go through the series since it cannot be distributed directly.
+That download is the script to build the image and nothing else. *You will need to carry this image forward* as you go through the series since it cannot be distributed directly.
 
 The lab it feeds — the topology, the
 two device configurations, and the scripts that drive them — arrives with

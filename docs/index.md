@@ -43,6 +43,15 @@ to network automation — and that the series says plainly where its own design 
 
     [:octicons-arrow-right-24: Start here](00-designing-before-building.md)
 
+-   :lucide-flask-conical:{ .lg .middle } __You don't need a rack of routers__
+
+    ---
+
+    Two Cisco routers on your laptop, defined in one file. Plus three ways to reboot one,
+    two of which lie to you.
+
+    [:octicons-arrow-right-24: Build the lab](01-you-dont-need-a-rack-of-routers.md)
+
 </div>
 
 ## What's next

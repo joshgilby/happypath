@@ -13,7 +13,7 @@ in production, carefully, outside business hours, because the alternative is a l
 that costs real money and lives in a rack somewhere doing nothing most of the time.
 
 This series walks through building Quelaag — a system that notices when a device's credentials drift
-from the recorded truth and corrects them; [the previous article](00-designing-before-building.md)
+from the recorded truth and corrects them; [the first article](00-designing-before-building.md)
 drew the design. A system like that cannot be developed against production. It will not be
 developed against assertions either: everything in this series gets measured on a real network OS.
 Observing real outcomes often surfaces incorrect assumptions that must be addressed before moving to production.
