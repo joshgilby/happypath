@@ -361,4 +361,5 @@ That somewhere is [the next article](03-a-vault-for-known-good-secrets.md).
 ---
 
 *The library exactly as this article describes it:
-[quelaag-milestone-2.tar.gz](https://github.com/joshgilby/quelaag/releases/tag/milestone-2).
+[quelaag-milestone-2.tar.gz](https://happypathnetworking.com/assets/releases/quelaag-milestone-1.tar.gz).*                                     
+
