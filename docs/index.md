@@ -52,6 +52,15 @@ to network automation — and that the series says plainly where its own design 
 
     [:octicons-arrow-right-24: Build the lab](01-you-dont-need-a-rack-of-routers.md)
 
+-   :lucide-hash:{ .lg .middle } __Reading the `$8$`__
+
+    ---
+
+    What a type-8 hash actually is, and the two encoding details no document records —
+    the ones that decide whether your output matches a real device.
+
+    [:octicons-arrow-right-24: Read](02-reading-the-8.md)
+
 </div>
 
 ## What's next
