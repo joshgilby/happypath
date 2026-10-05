@@ -2,8 +2,8 @@
 icon: lucide/hash
 ---
 
-![Drafting](/assets/images/00-drafting-l.png#only-light)
-![Drafting](/assets/images/00-drafting-d.png#only-dark)
+![Drafting](/assets/images/02-decoder-l.png#only-light)
+![Drafting](/assets/images/02-decoder-d.png#only-dark)
 
 # Reading the `$8$`
 
