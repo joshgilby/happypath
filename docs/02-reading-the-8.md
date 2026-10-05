@@ -2,6 +2,9 @@
 icon: lucide/hash
 ---
 
+![Drafting](/assets/images/00-drafting-l.png#only-light)
+![Drafting](/assets/images/00-drafting-d.png#only-dark)
+
 # Reading the `$8$`
 
 The previous article ended with a router handing you two of these and no explanation:
