@@ -302,6 +302,9 @@ library verify correctly. Generation flows the other way — and a later article
 push library-minted hashes onto devices as corrections, so "a device would accept it"
 cannot be confirmed by a unit test. Only a device gets to say that:
 
+!!! warning "Lab needed"
+Ensure your lab is running (`./lab/up.sh` to start it) before running the round trip check
+
 ``` console
 $ uv run scripts/roundtrip_check.py r1
 generated $8$3Zqdo2lBpVdAP9$tp8gnmF2xoMZTITYs0WVl3p7/X8f8kppKXLFJ.OaZRA
