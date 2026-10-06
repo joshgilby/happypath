@@ -299,8 +299,8 @@ correct. Measurement against a canonical reference says otherwise.
 
 !!! warning "Lab needed"
 
-Ensure your lab is running (`./lab/up.sh` to start it) before running the round trip check.
-If the lab is down, the check will produce connection errors.
+    Ensure your lab is running (`./lab/up.sh` to start it) before running the round trip check.
+    If the lab is down, the check will produce connection errors.
 
 Reproducing device hashes settles one direction: hashes flowing from the device to the
 library verify correctly. Generation flows the other way — and a later article will
