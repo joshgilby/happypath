@@ -35,7 +35,7 @@ so installing Node is the whole of it. Grab this article's archive and everythin
 runs from its root:
 
 ```sh
-curl -LO https://github.com/joshgilby/quelaag/releases/download/milestone-2/quelaag-milestone-2.tar.gz
+curl -LO https://happypathnetworking.com/assets/releases/quelaag-milestone-2.tar.gz
 tar -xf quelaag-milestone-2.tar.gz
 cd quelaag-milestone-2
 ```
@@ -364,5 +364,4 @@ That somewhere is [the next article](03-a-vault-for-known-good-secrets.md).
 ---
 
 *The library exactly as this article describes it:
-[quelaag-milestone-2.tar.gz](https://happypathnetworking.com/assets/releases/quelaag-milestone-1.tar.gz).*                                     
-
+[quelaag-milestone-2.tar.gz](https://happypathnetworking.com/assets/releases/quelaag-milestone-2.tar.gz).*                                     
