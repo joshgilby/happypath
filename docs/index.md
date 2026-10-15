@@ -56,10 +56,19 @@ to network automation — and that the series says plainly where its own design 
 
     ---
 
-    What a type-8 hash actually is, and the two encoding details no document records —
+    What a type-8 hash actually is, and the two hard-to-find encoding details —
     the ones that decide whether your output matches a real device.
 
     [:octicons-arrow-right-24: Read](02-reading-the-8.md)
+
+-   :lucide-vault:{ .lg .middle } __Stash the secrets__
+
+    ---
+
+    A place to keep plaintext secrets. A simple secret encryption library for local
+    development.
+
+    [:octicons-arrow-right-24: Stash](03-a-vault-for-known-good-secrets.md)
 
 </div>
 
