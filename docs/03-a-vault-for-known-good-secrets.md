@@ -271,5 +271,4 @@ this system talk to each other for the first time.
 ---
 
 *The vault exactly as this article describes it:
-To watch it being built commit by commit:
 [quelaag-milestone-3.tar.gz](https://happypathnetworking.com/assets/releases/quelaag-milestone-3.tar.gz).*                                     
